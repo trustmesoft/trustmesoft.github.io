@@ -1,0 +1,61 @@
+section {
+    height: 100%;
+}
+
+.color_main {
+    background-color: #747afd;
+}
+
+.color_white {
+    color: #ffffff;
+}
+
+.default_font_color {
+    color: #707070
+}
+
+.toonies_hr {
+    width: 50px;
+    float: left;
+    background: #747afd;
+}
+
+/* Css for mobile */
+@media screen and (max-width: 480px) {
+    .toonies_hr {
+        width: 20%;
+        float: none;
+        background: #747afd;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile-background {
+        background-color: #747afd;
+    }
+
+    .mobile-logo {
+        float: left;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+/* Css for desktop */
+@media screen and (min-width:481px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile-background {
+        background-color: #ffffff;
+    }
+}
