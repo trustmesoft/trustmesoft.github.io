@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- One page javascript -->
+    <script src="./js/jquery.onepage-scroll.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- One page css -->
+    <link rel="stylesheet" href="./css/onepage-scroll.css" />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./css/toones.css" />
+
+
+    <style>
+        .row {
+            border: 1px solid green;
+        }
+
+        .col-12 {
+            border: 1px solid red;
+        }
+
+        section {
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body>
+        <div class="main">
+            <section>
+                <div class="container ">
+                    <div class=" row" style="height: 100vh">
+                        <div class="col-12 float-left" style="height: 10vh">
+                            <img src="./assets/images/toonies_logo.png" height="100%">
+                        </div>
+                        <div class="col-12 text-center justify-content-center align-items-center" style="height: 10vh">
+                            <h4 class="font-weight-bold">궁금하면 보자!<br>전부 무료로!</h4>
+                        </div>
+                        <div class="col-12 text-center" style="height: 70vh">
+                            <img src="./assets/images/main_phone.png" height="100%">
+                        </div>
+                        <div class="col-12 align-items-center text-center" style="height: 10vh;">
+                            <button class="btn btn-primary" style="width: 85%">google play</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>aaaabbaaaa</h2>
+            </section>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".main").onepage_scroll({
+                sectionContainer: "section",
+                easing: "ease",
+                animationTime: 900,
+                pagination: false,
+                updateURL: false,
+                beforeMove: function (index) { },
+                afterMove: function (index) { },
+                loop: false,
+                keyboard: true,
+                responsiveFallback: false,
+                direction: "vertical"
+            });
+
+        })
+
+        function move2Top() {
+            $(".main").moveTo(1);
+        }
+        $(window).resize(function () {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) || $(window).width() < 480) {
+                console.log("mobile");
+            } else {
+                console.log("not mobile");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
